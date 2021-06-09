@@ -3,6 +3,7 @@ package com.example.tuan_9_bai2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -124,7 +125,14 @@ public class MoodActivity extends AppCompatActivity {
                         });
                     }
                 });
+                btnFinish.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(MoodActivity.this,MainActivity.class));
+                    }
+                });
             }
 
             @Override
