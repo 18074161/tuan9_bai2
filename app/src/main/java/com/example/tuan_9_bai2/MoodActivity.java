@@ -128,7 +128,6 @@ public class MoodActivity extends AppCompatActivity {
                 btnFinish.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(MoodActivity.this,MainActivity.class));
                     }
